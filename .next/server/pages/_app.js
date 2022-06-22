@@ -1,0 +1,134 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
+exports.modules = {
+
+/***/ "./component/Footer.tsx":
+/*!******************************!*\
+  !*** ./component/Footer.tsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Footer = ()=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: \"Footer\"\n    }, void 0, false, {\n        fileName: \"/home/irfan/Desktop/food-app/component/Footer.tsx\",\n        lineNumber: 6,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnQvRm9vdGVyLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQ3lCO0FBRXpCLE1BQU1DLE1BQU0sR0FBWSxJQUFNO0lBQzVCLHFCQUNFLDhEQUFDQyxLQUFHO2tCQUFDLFFBRUw7Ozs7O2lCQUFNLENBQ1A7Q0FDRjtBQUVELGlFQUFlRCxNQUFNIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZm9vZC1hcHAvLi9jb21wb25lbnQvRm9vdGVyLnRzeD8wNDk1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5leHRQYWdlIH0gZnJvbSAnbmV4dCdcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcblxuY29uc3QgRm9vdGVyOk5leHRQYWdlID0gKCkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgIEZvb3RlciBcbiAgICA8L2Rpdj5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBGb290ZXJcbiJdLCJuYW1lcyI6WyJSZWFjdCIsIkZvb3RlciIsImRpdiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./component/Footer.tsx\n");
+
+/***/ }),
+
+/***/ "./component/Layout.tsx":
+/*!******************************!*\
+  !*** ./component/Layout.tsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ \"./component/Footer.tsx\");\n/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navbar */ \"./component/Navbar.tsx\");\n\n\n\n\nconst Layout = ({ children  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Navbar__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {}, void 0, false, {\n                fileName: \"/home/irfan/Desktop/food-app/component/Layout.tsx\",\n                lineNumber: 10,\n                columnNumber: 7\n            }, undefined),\n            children,\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Footer__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, void 0, false, {\n                fileName: \"/home/irfan/Desktop/food-app/component/Layout.tsx\",\n                lineNumber: 12,\n                columnNumber: 7\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/irfan/Desktop/food-app/component/Layout.tsx\",\n        lineNumber: 9,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnQvTGF5b3V0LnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7QUFBdUM7QUFDVjtBQUNBO0FBSTdCLE1BQU1JLE1BQU0sR0FBbUIsQ0FBQyxFQUFDQyxRQUFRLEdBQUMsR0FBSztJQUM3QyxxQkFDRSw4REFBQ0osMkNBQVE7OzBCQUNQLDhEQUFDRSwrQ0FBTTs7Ozt5QkFBRTtZQUNSRSxRQUFROzBCQUNULDhEQUFDSCwrQ0FBTTs7Ozt5QkFBRTs7Ozs7O2lCQUNBLENBQ1o7Q0FDRjtBQUVELGlFQUFlRSxNQUFNIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZm9vZC1hcHAvLi9jb21wb25lbnQvTGF5b3V0LnRzeD8yYTUwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBGcmFnbWVudCB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEZvb3RlciBmcm9tICcuL0Zvb3RlcidcbmltcG9ydCBOYXZiYXIgZnJvbSAnLi9OYXZiYXInXG5pbnRlcmZhY2UgUHJvcHMge1xuICAgIGNoaWxkcmVuOiBSZWFjdC5SZWFjdE5vZGU7XG4gIH1cbmNvbnN0IExheW91dDpSZWFjdC5GQzxQcm9wcz4gPSAoe2NoaWxkcmVufSkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxGcmFnbWVudD5cbiAgICAgIDxOYXZiYXIvPlxuICAgICAge2NoaWxkcmVufVxuICAgICAgPEZvb3Rlci8+XG4gICAgPC9GcmFnbWVudD5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXRcbiJdLCJuYW1lcyI6WyJSZWFjdCIsIkZyYWdtZW50IiwiRm9vdGVyIiwiTmF2YmFyIiwiTGF5b3V0IiwiY2hpbGRyZW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./component/Layout.tsx\n");
+
+/***/ }),
+
+/***/ "./component/Navbar.tsx":
+/*!******************************!*\
+  !*** ./component/Navbar.tsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var material_ui_icons_Call__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-ui-icons/Call */ \"material-ui-icons/Call\");\n/* harmony import */ var material_ui_icons_Call__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(material_ui_icons_Call__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var material_ui_icons_Restaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! material-ui-icons/Restaurant */ \"material-ui-icons/Restaurant\");\n/* harmony import */ var material_ui_icons_Restaurant__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(material_ui_icons_Restaurant__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var material_ui_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! material-ui-icons */ \"material-ui-icons\");\n/* harmony import */ var material_ui_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(material_ui_icons__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nconst Navbar = ()=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"containers h-24 p-0 pr-12 pl-12 bg-red-500 flex justify-between items-center sticky top-0\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"item flex-none w-52 h-14 flex items-center\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"callButton text-white rounded-full \",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((material_ui_icons_Call__WEBPACK_IMPORTED_MODULE_2___default()), {}, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 12,\n                            columnNumber: 11\n                        }, undefined)\n                    }, void 0, false, {\n                        fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                        lineNumber: 11,\n                        columnNumber: 9\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"texts ml-5 text-white\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"text text-xs font-medium\",\n                                children: \"ORDER NOW!\"\n                            }, void 0, false, {\n                                fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                                lineNumber: 15,\n                                columnNumber: 11\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"text text-xl font-bold\",\n                                children: \"0123456789\"\n                            }, void 0, false, {\n                                fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                                lineNumber: 16,\n                                columnNumber: 11\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                        lineNumber: 14,\n                        columnNumber: 9\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                lineNumber: 10,\n                columnNumber: 7\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"item grow h-14\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"ul\", {\n                    className: \"list p-0 flex items-center justify-center text-white\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            className: \"listItem m-5 font-medium text-xl\",\n                            children: \"Home\"\n                        }, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 21,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            className: \"listItem m-5 font-medium text-xl\",\n                            children: \"Products\"\n                        }, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 22,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            className: \"listItem m-5 font-medium text-xl\",\n                            children: \"Menu\"\n                        }, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 23,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((material_ui_icons_Restaurant__WEBPACK_IMPORTED_MODULE_3___default()), {\n                            className: \"m-5 font-medium text-xl\"\n                        }, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 24,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            className: \"listItem m-5 font-medium text-xl\",\n                            children: \"Events\"\n                        }, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 25,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            className: \"listItem m-5 font-medium text-xl\",\n                            children: \"Contact\"\n                        }, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 26,\n                            columnNumber: 11\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                    lineNumber: 20,\n                    columnNumber: 9\n                }, undefined)\n            }, void 0, false, {\n                fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                lineNumber: 19,\n                columnNumber: 7\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"item flex-none w-52 justify-end text-white flex\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"cart absolute\",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(material_ui_icons__WEBPACK_IMPORTED_MODULE_4__.ShoppingCart, {}, void 0, false, {\n                            fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                            lineNumber: 31,\n                            columnNumber: 11\n                        }, undefined)\n                    }, void 0, false, {\n                        fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                        lineNumber: 30,\n                        columnNumber: 9\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"counter relative -top-4 -right-2\",\n                        children: \"2\"\n                    }, void 0, false, {\n                        fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                        lineNumber: 33,\n                        columnNumber: 9\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n                lineNumber: 29,\n                columnNumber: 7\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/irfan/Desktop/food-app/component/Navbar.tsx\",\n        lineNumber: 9,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnQvTmF2YmFyLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBO0FBQzBCO0FBQ29CO0FBQ1E7QUFDTDtBQUVqRCxNQUFNSSxNQUFNLEdBQWEsSUFBTTtJQUM3QixxQkFDRSw4REFBQ0MsS0FBRztRQUFDQyxTQUFTLEVBQUMsMkZBQTJGOzswQkFDeEcsOERBQUNELEtBQUc7Z0JBQUNDLFNBQVMsRUFBQyw0Q0FBNEM7O2tDQUN6RCw4REFBQ0QsS0FBRzt3QkFBQ0MsU0FBUyxFQUFDLHFDQUFxQztrQ0FDbEQsNEVBQUNMLCtEQUFROzs7O3FDQUFFOzs7OztpQ0FDUDtrQ0FDTiw4REFBQ0ksS0FBRzt3QkFBQ0MsU0FBUyxFQUFDLHVCQUF1Qjs7MENBQ3BDLDhEQUFDRCxLQUFHO2dDQUFDQyxTQUFTLEVBQUMsMEJBQTBCOzBDQUFDLFlBQVU7Ozs7O3lDQUFNOzBDQUMxRCw4REFBQ0QsS0FBRztnQ0FBQ0MsU0FBUyxFQUFDLHdCQUF3QjswQ0FBQyxZQUFVOzs7Ozt5Q0FBTTs7Ozs7O2lDQUNwRDs7Ozs7O3lCQUNGOzBCQUNOLDhEQUFDRCxLQUFHO2dCQUFDQyxTQUFTLEVBQUMsZ0JBQWdCOzBCQUM3Qiw0RUFBQ0MsSUFBRTtvQkFBQ0QsU0FBUyxFQUFDLHNEQUFzRDs7c0NBQ2xFLDhEQUFDRSxJQUFFOzRCQUFDRixTQUFTLEVBQUMsa0NBQWtDO3NDQUFDLE1BQUk7Ozs7O3FDQUFLO3NDQUMxRCw4REFBQ0UsSUFBRTs0QkFBQ0YsU0FBUyxFQUFDLGtDQUFrQztzQ0FBQyxVQUFROzs7OztxQ0FBSztzQ0FDOUQsOERBQUNFLElBQUU7NEJBQUNGLFNBQVMsRUFBQyxrQ0FBa0M7c0NBQUMsTUFBSTs7Ozs7cUNBQUs7c0NBQzFELDhEQUFDSixxRUFBVTs0QkFBQ0ksU0FBUyxFQUFDLHlCQUF5Qjs7Ozs7cUNBQUc7c0NBQ2xELDhEQUFDRSxJQUFFOzRCQUFDRixTQUFTLEVBQUMsa0NBQWtDO3NDQUFDLFFBQU07Ozs7O3FDQUFLO3NDQUM1RCw4REFBQ0UsSUFBRTs0QkFBQ0YsU0FBUyxFQUFDLGtDQUFrQztzQ0FBQyxTQUFPOzs7OztxQ0FBSzs7Ozs7OzZCQUMxRDs7Ozs7eUJBQ0Q7MEJBQ04sOERBQUNELEtBQUc7Z0JBQUNDLFNBQVMsRUFBQyxpREFBa0Q7O2tDQUMvRCw4REFBQ0QsS0FBRzt3QkFBQ0MsU0FBUyxFQUFDLGVBQWU7a0NBQzVCLDRFQUFDSCwyREFBWTs7OztxQ0FBRzs7Ozs7aUNBQ1o7a0NBQ04sOERBQUNFLEtBQUc7d0JBQUNDLFNBQVMsRUFBQyxrQ0FBa0M7a0NBQUMsR0FBQzs7Ozs7aUNBQU07Ozs7Ozt5QkFDckQ7Ozs7OztpQkFDRixDQUNOO0NBQ0g7QUFFRCxpRUFBZUYsTUFBTSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZm9vZC1hcHAvLi9jb21wb25lbnQvTmF2YmFyLnRzeD9hZTZiIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5leHRQYWdlIH0gZnJvbSBcIm5leHRcIjtcbmltcG9ydCBSZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBDYWxsSWNvbiBmcm9tIFwibWF0ZXJpYWwtdWktaWNvbnMvQ2FsbFwiO1xuaW1wb3J0IFJlc3RhdXJhbnQgZnJvbSBcIm1hdGVyaWFsLXVpLWljb25zL1Jlc3RhdXJhbnRcIjtcbmltcG9ydCB7IFNob3BwaW5nQ2FydCB9IGZyb20gXCJtYXRlcmlhbC11aS1pY29uc1wiO1xuXG5jb25zdCBOYXZiYXI6IE5leHRQYWdlID0gKCkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVycyBoLTI0IHAtMCBwci0xMiBwbC0xMiBiZy1yZWQtNTAwIGZsZXgganVzdGlmeS1iZXR3ZWVuIGl0ZW1zLWNlbnRlciBzdGlja3kgdG9wLTBcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaXRlbSBmbGV4LW5vbmUgdy01MiBoLTE0IGZsZXggaXRlbXMtY2VudGVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FsbEJ1dHRvbiB0ZXh0LXdoaXRlIHJvdW5kZWQtZnVsbCBcIj5cbiAgICAgICAgICA8Q2FsbEljb24vPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0cyBtbC01IHRleHQtd2hpdGVcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQgdGV4dC14cyBmb250LW1lZGl1bVwiPk9SREVSIE5PVyE8L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQgdGV4dC14bCBmb250LWJvbGRcIj4wMTIzNDU2Nzg5PC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIml0ZW0gZ3JvdyBoLTE0XCI+XG4gICAgICAgIDx1bCBjbGFzc05hbWU9XCJsaXN0IHAtMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LXdoaXRlXCI+XG4gICAgICAgICAgPGxpIGNsYXNzTmFtZT1cImxpc3RJdGVtIG0tNSBmb250LW1lZGl1bSB0ZXh0LXhsXCI+SG9tZTwvbGk+XG4gICAgICAgICAgPGxpIGNsYXNzTmFtZT1cImxpc3RJdGVtIG0tNSBmb250LW1lZGl1bSB0ZXh0LXhsXCI+UHJvZHVjdHM8L2xpPlxuICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJsaXN0SXRlbSBtLTUgZm9udC1tZWRpdW0gdGV4dC14bFwiPk1lbnU8L2xpPlxuICAgICAgICAgIDxSZXN0YXVyYW50IGNsYXNzTmFtZT1cIm0tNSBmb250LW1lZGl1bSB0ZXh0LXhsXCIgLz5cbiAgICAgICAgICA8bGkgY2xhc3NOYW1lPVwibGlzdEl0ZW0gbS01IGZvbnQtbWVkaXVtIHRleHQteGxcIj5FdmVudHM8L2xpPlxuICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJsaXN0SXRlbSBtLTUgZm9udC1tZWRpdW0gdGV4dC14bFwiPkNvbnRhY3Q8L2xpPlxuICAgICAgICA8L3VsPlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIml0ZW0gZmxleC1ub25lIHctNTIgIGp1c3RpZnktZW5kIHRleHQtd2hpdGUgZmxleFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNhcnQgYWJzb2x1dGVcIj5cbiAgICAgICAgICA8U2hvcHBpbmdDYXJ0IC8+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvdW50ZXIgcmVsYXRpdmUgLXRvcC00IC1yaWdodC0yXCI+MjwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBOYXZiYXI7XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJDYWxsSWNvbiIsIlJlc3RhdXJhbnQiLCJTaG9wcGluZ0NhcnQiLCJOYXZiYXIiLCJkaXYiLCJjbGFzc05hbWUiLCJ1bCIsImxpIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./component/Navbar.tsx\n");
+
+/***/ }),
+
+/***/ "./pages/_app.tsx":
+/*!************************!*\
+  !*** ./pages/_app.tsx ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _component_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/Layout */ \"./component/Layout.tsx\");\n\n\n\nfunction MyApp({ Component , pageProps  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_component_Layout__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n            ...pageProps\n        }, void 0, false, {\n            fileName: \"/home/irfan/Desktop/food-app/pages/_app.tsx\",\n            lineNumber: 8,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/home/irfan/Desktop/food-app/pages/_app.tsx\",\n        lineNumber: 7,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTtBQUErQjtBQUVVO0FBRXpDLFNBQVNDLEtBQUssQ0FBQyxFQUFFQyxTQUFTLEdBQUVDLFNBQVMsR0FBWSxFQUFFO0lBQ2pELHFCQUNFLDhEQUFDSCx5REFBTTtrQkFDTCw0RUFBQ0UsU0FBUztZQUFFLEdBQUdDLFNBQVM7Ozs7O2dCQUFJOzs7OztZQUNyQixDQUNUO0NBQ0g7QUFFRCxpRUFBZUYsS0FBSyxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZm9vZC1hcHAvLi9wYWdlcy9fYXBwLnRzeD8yZmJlIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBcIi4uL3N0eWxlcy9nbG9iYWxzLmNzc1wiO1xuaW1wb3J0IHR5cGUgeyBBcHBQcm9wcyB9IGZyb20gXCJuZXh0L2FwcFwiO1xuaW1wb3J0IExheW91dCBmcm9tIFwiLi4vY29tcG9uZW50L0xheW91dFwiO1xuXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH06IEFwcFByb3BzKSB7XG4gIHJldHVybiAoXG4gICAgPExheW91dD5cbiAgICAgIDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cbiAgICA8L0xheW91dD5cbiAgKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgTXlBcHA7XG4iXSwibmFtZXMiOlsiTGF5b3V0IiwiTXlBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/_app.tsx\n");
+
+/***/ }),
+
+/***/ "./styles/globals.css":
+/*!****************************!*\
+  !*** ./styles/globals.css ***!
+  \****************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "material-ui-icons":
+/*!************************************!*\
+  !*** external "material-ui-icons" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("material-ui-icons");
+
+/***/ }),
+
+/***/ "material-ui-icons/Call":
+/*!*****************************************!*\
+  !*** external "material-ui-icons/Call" ***!
+  \*****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("material-ui-icons/Call");
+
+/***/ }),
+
+/***/ "material-ui-icons/Restaurant":
+/*!***********************************************!*\
+  !*** external "material-ui-icons/Restaurant" ***!
+  \***********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("material-ui-icons/Restaurant");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__("./pages/_app.tsx"));
+module.exports = __webpack_exports__;
+
+})();
