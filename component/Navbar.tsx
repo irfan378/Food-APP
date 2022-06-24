@@ -1,15 +1,13 @@
 import { NextPage } from "next";
 import React from "react";
-import CallIcon from "material-ui-icons/Call";
-import Restaurant from "material-ui-icons/Restaurant";
-import { ShoppingCart } from "material-ui-icons";
+import Image from "next/image";
 
 const Navbar: NextPage = () => {
   return (
     <div className="containers h-24 p-0 pr-12 pl-12 bg-red-500 flex justify-between items-center sticky top-0">
       <div className="item flex-none w-52 h-14 flex items-center">
-        <div className="callButton text-white rounded-full ">
-          <CallIcon/>
+        <div className="callButton text-white bg-white rounded-[50%] w-[50px] h-[50px] p-2">
+          <Image src="/img/telephone.png" alt="" width="32" height="32" />
         </div>
         <div className="texts ml-5 text-white">
           <div className="text text-xs font-medium">ORDER NOW!</div>
@@ -21,14 +19,13 @@ const Navbar: NextPage = () => {
           <li className="listItem m-5 font-medium text-xl">Home</li>
           <li className="listItem m-5 font-medium text-xl">Products</li>
           <li className="listItem m-5 font-medium text-xl">Menu</li>
-          <Restaurant className="m-5 font-medium text-xl" />
           <li className="listItem m-5 font-medium text-xl">Events</li>
           <li className="listItem m-5 font-medium text-xl">Contact</li>
         </ul>
       </div>
       <div className="item flex-none w-52  justify-end text-white flex">
         <div className="cart absolute">
-          <ShoppingCart />
+          <Image src="/img/cart.png" alt="" width="32" height="32" />
         </div>
         <div className="counter relative -top-4 -right-2">2</div>
       </div>
