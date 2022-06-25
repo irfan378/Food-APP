@@ -27,7 +27,7 @@ const Featured: NextPage = () => {
         />
       </div>
       <div
-        className="wrapper w-[300vw] h-full flex"
+        className="wrapper w-[300vw] h-full flex transition-all duration-[1.5s] ease-in-out"
         style={{ transform: `translateX(${100 * index}vw)` }}
       >
         {images.map((img, i) => (
