@@ -16,7 +16,7 @@ const Featured: NextPage = () => {
   let images: string[];
   images = ["/img/featured2.png", "/img/featured3.png"];
   return (
-    <div className="containerr h-[calc(100vh-100px)] bg-red-500 flex justify-end">
+    <div className="containerr h-[50vh] md:h-[calc(100vh-100px)] relative bg-red-500 flex justify-end">
       <div className="absolute w-[10%] h-[20%] top-0 bottom-0 m-auto left-0 cursor-pointer z-[2]">
         <Image
           src="/img/arrowl.png"

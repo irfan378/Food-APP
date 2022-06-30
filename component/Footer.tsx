@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const Footer: NextPage = () => {
   return (
-    <div className="container2 h-[calc(100vh-100px)] bg-black flex ">
-      <div className="flex-[1] relative flex item">
+    <div className="container2 h-auto md:h-[calc(100vh-100px)] bg-black flex ">
+      <div className="hidden flex-[1] relative md:flex item">
         <Image src="/img/bg.png" objectFit="cover" layout="fill" alt="" />
       </div>
-      <div className="flex-[2] p-14 justify-between relative flex item">
+      <div className="item  flex-[2] p-14 justify-between relative md:flex-col ">
         <div className="flex-[1] card px-2 py-5 ">
           <h2 className="motto text-[#b09999]  py-5 font-medium  text-5xl">
            Let us feel you different here.
