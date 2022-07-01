@@ -4,18 +4,21 @@ import Image from "next/image";
 
 const Cart: NextPage = () => {
   return (
-    <div className="container3 flex p-[50px]">
+    <div className="container3 flex flex-col p-5 md:flex-row md:p-[50px]">
       <div className="left flex-[2]">
-        <table className="tables w-[70%] border-spacing-10">
-          <tr className="tr">
+        <table className="tables flex flex-col items-center justify-center md:block w-[70%] border-spacing-10">
+          <thead className="tr">
+            <tr>
             <th>Product</th>
             <th>Name</th>
             <th>Extras</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Total</th>
-          </tr>
-          <tr>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
             <td>
               <div className="imgContainer w-[100px] h-[100px] relative">
                 <Image
@@ -41,7 +44,8 @@ const Cart: NextPage = () => {
             <td>
               <span className="total font-medium text-lg">$39.90</span>
             </td>
-          </tr>
+            </tr>
+          </tbody>
         </table>
       </div>
       <div className="right flex-[1]">

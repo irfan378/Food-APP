@@ -9,22 +9,22 @@ const Product: NextPage = () => {
     name: "Campangola",
     price: [20, 26, 30],
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, accusantium?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, et!",
-  };
+  }; 
   return (
-    <div className="containers h-[calc(100vh-100px)] flex">
+    <div className="containers  mt-5 h-auto text-center flex-col md:h-[calc(100vh-100px)] md:flex md:flex-row">
       <div className="left flex-[1] h-full flex item-center justify-center">
-        <div className="imgContainer w-3/4 h-3/4 relative">
+        <div className="imgContainer w-[70vw] h-[70vw]  relative md:w-3/4 md:h-3/4">
           <Image src={pizza.img} objectFit="contain" layout="fill" alt="" />
         </div>
       </div>
       <div className="right flex-[1] p-5">
-        <h1 className="title text-4xl font-semibold">{pizza.name}</h1>
+        <h1 className="title m-1 text-4xl font-semibold">{pizza.name}</h1>
         <span className="price text-[#d1411e] text-2xl font-normal border-b border-solid border-[red]">
           ${pizza.price[size]}
         </span>
         <p className="desc text-xl">{pizza.desc}</p>
         <h3 className="choose py-2">Choose the Size</h3>
-        <div className="sizes py-2 flex justify-between w-[40%] cursor-pointer">
+        <div className="sizes py-0 px-5 md:py-2 md:px-0 flex justify-between w-full  md:w-[40%] cursor-pointer">
           <div className="size w-8 h-8 relative" onClick={() => setSize(0)}>
             <Image src="/img/size.png" alt="" layout="fill" />
             <span className="number absolute -top-1 -right-5 bg-[teal] text-[12px] py-0 px-1 rounded-xl">
@@ -45,7 +45,7 @@ const Product: NextPage = () => {
           </div>
         </div>
         <h3 className="choose font-medium text-xl mb-7 ml-3">Choose additional Ingredients</h3>
-        <div className="ingredients flex mb-7 ">
+        <div className="ingredients flex-col md:flex md:flex-row mb-7 ">
           <div className="option flex items-center mb-3 text-base font-medium ml-3">
             <input
               type="checkbox"
@@ -84,7 +84,7 @@ const Product: NextPage = () => {
           </div>
         </div>
         <div className="add">
-          <input type="number" defaultValue={1} className="quantity w-12 h-8 border" />
+          <input type="number" defaultValue={1} className="quantity h-12  w-12 md:h-8 border" />
           <button className="h-9 ml-3 px-2 py-2 bg-[#f51010] text-white border-none text-base font-medium cursor-pointer">Add to Cart</button>
         </div>
       </div>
