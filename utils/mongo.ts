@@ -8,9 +8,7 @@ if (!MONGODB_URI) {
 }
 
 async function dbConnect() {
-  mongoose.connect(MONGODB_URI).then((mongoose) => {
-    return mongoose;
-  });
+  mongoose.connect(MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 }
 
 export default dbConnect;
