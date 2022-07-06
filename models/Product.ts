@@ -1,6 +1,7 @@
+import mongoose from "mongoose";
 import { createSchema, Type, typedModel } from "ts-mongoose";
 
-const ProductSchema = createSchema(
+let ProductSchema = createSchema(
   {
     title: Type.string({ required: true, maxlength: 60 }),
     desc: Type.string({ required: true, maxlength: 200 }),
@@ -13,4 +14,5 @@ const ProductSchema = createSchema(
   },
   { timestamps: true }
 );
-export const Product = typedModel("Product", ProductSchema);
+let Product = typedModel("Product", ProductSchema);
+export default Product||mongoose.models.Product;
