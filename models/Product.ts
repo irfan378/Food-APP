@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { createSchema, Type, typedModel } from "ts-mongoose";
 
-let ProductSchema = createSchema(
+const ProductSchema = createSchema(
   {
     title: Type.string({ required: true, maxlength: 60 }),
     desc: Type.string({ required: true, maxlength: 200 }),
@@ -14,5 +14,5 @@ let ProductSchema = createSchema(
   },
   { timestamps: true }
 );
-let Product = typedModel("Product", ProductSchema);
-export default Product||mongoose.models.Product;
+
+export const Product=mongoose.models.Product||mongoose.model("Product",ProductSchema)
