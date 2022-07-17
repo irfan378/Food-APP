@@ -1,15 +1,11 @@
-import { NextPage } from "next";
+import { GetServerSideProps} from "next";
 import React, { useState } from "react";
 import Image from "next/image";
-const Product: NextPage = () => {
+import axios from "axios";
+import { ProductLists } from "../../typings";
+const Product = ({ pizza }: { pizza: ProductLists }) => {
   const [size, setSize] = useState<number>(0);
-  const pizza = {
-    id: 1,
-    img: "/img/pizza.png",
-    name: "Campangola",
-    price: [20, 26, 30],
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, accusantium?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, et!",
-  }; 
+  
   return (
     <div className="containers  mt-5 h-auto text-center flex-col md:h-[calc(100vh-100px)] md:flex md:flex-row">
       <div className="left flex-[1] h-full flex item-center justify-center">
@@ -18,9 +14,9 @@ const Product: NextPage = () => {
         </div>
       </div>
       <div className="right flex-[1] p-5">
-        <h1 className="title m-1 text-4xl font-semibold">{pizza.name}</h1>
+        <h1 className="title m-1 text-4xl font-semibold">{pizza.title}</h1>
         <span className="price text-[#d1411e] text-2xl font-normal border-b border-solid border-[red]">
-          ${pizza.price[size]}
+          ${pizza.prices}
         </span>
         <p className="desc text-xl">{pizza.desc}</p>
         <h3 className="choose py-2">Choose the Size</h3>
@@ -44,7 +40,9 @@ const Product: NextPage = () => {
             </span>
           </div>
         </div>
-        <h3 className="choose font-medium text-xl mb-7 ml-3">Choose additional Ingredients</h3>
+        <h3 className="choose font-medium text-xl mb-7 ml-3">
+          Choose additional Ingredients
+        </h3>
         <div className="ingredients flex-col md:flex md:flex-row mb-7 ">
           <div className="option flex items-center mb-3 text-base font-medium ml-3">
             <input
@@ -84,12 +82,30 @@ const Product: NextPage = () => {
           </div>
         </div>
         <div className="add">
-          <input type="number" defaultValue={1} className="quantity h-12  w-12 md:h-8 border" />
-          <button className="h-9 ml-3 px-2 py-2 bg-[#f51010] text-white border-none text-base font-medium cursor-pointer">Add to Cart</button>
+          <input
+            type="number"
+            defaultValue={1}
+            className="quantity h-12  w-12 md:h-8 border"
+          />
+          <button className="h-9 ml-3 px-2 py-2 bg-[#f51010] text-white border-none text-base font-medium cursor-pointer">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
   );
+};
+export const getServerSideProps: GetServerSideProps = async ({ params }:any) => {
+  
+    const res = await axios.get(`http://localhost:3000/api/product/${params.id}`);
+
+    return {
+      props: {
+        pizza: res.data,
+      },
+    };
+  
+ 
 };
 
 export default Product;
