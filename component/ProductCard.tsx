@@ -14,7 +14,7 @@ const ProductCard= ({pizza}:{
       </Link>
       
       <h1 className="text-2xl text-red-600 font-bold">{pizza.title}</h1>
-      <span className="text-2xl text-black font-bold">${pizza.prices}</span>
+      <span className="text-2xl text-black font-bold">${pizza.prices[0]}</span>
       <p className="text-center text-black">{pizza.desc}</p>
     </div>
   );

@@ -4,6 +4,6 @@ export interface ProductLists{
     title: string;
     img: string;
     desc: string;
-    prices: number;
-    extraOptions: [object];
+    prices: number[];
+    extraOptions: [object:any];
 }
