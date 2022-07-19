@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { ProductLists } from "../../typings";
+
 const Product = ({ pizza }: { pizza: ProductLists }) => {
   const [size, setSize] = useState<number>(0);
   const [price, setPrice] = useState<number>(pizza.prices[0]);
   const [extras, setExtras] = useState<object[]>([]);
+  const [quantity,setQuantity]=useState<number>(1);
 
   const changePrice = (number: number) => {
     setPrice(price + number);
@@ -93,6 +95,7 @@ const Product = ({ pizza }: { pizza: ProductLists }) => {
         <div className="add">
           <input
             type="number"
+            onChange={(e:any)=>setQuantity(e.target.value)}
             defaultValue={1}
             className="quantity h-12  w-12 md:h-8 border"
           />

@@ -1,7 +1,6 @@
 import type {
   GetServerSideProps,
-  InferGetServerSidePropsType,
-  NextPage,
+ 
 } from "next";
 import Head from "next/head";
 import Featured from "../component/Featured";
