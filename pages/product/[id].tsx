@@ -3,13 +3,15 @@ import React, { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { ProductLists } from "../../typings";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartSlice";
 
 const Product = ({ pizza }: { pizza: ProductLists }) => {
   const [size, setSize] = useState<number>(0);
   const [price, setPrice] = useState<number>(pizza.prices[0]);
   const [extras, setExtras] = useState<object[]>([]);
-  const [quantity,setQuantity]=useState<number>(1);
-
+  const [quantity, setQuantity] = useState<number>(1);
+  const dispatch = useDispatch();
   const changePrice = (number: number) => {
     setPrice(price + number);
   };
@@ -28,8 +30,11 @@ const Product = ({ pizza }: { pizza: ProductLists }) => {
       setExtras((prev) => [...prev, option]);
     } else {
       changePrice(-option.price);
-      setExtras(extras.filter((extra:any)=>extra._id!==option._id));
+      setExtras(extras.filter((extra: any) => extra._id !== option._id));
     }
+  };
+  const handleClick = () => {
+    dispatch(addProduct({ ...pizza, extras, price, quantity }));
   };
 
   return (
@@ -95,11 +100,14 @@ const Product = ({ pizza }: { pizza: ProductLists }) => {
         <div className="add">
           <input
             type="number"
-            onChange={(e:any)=>setQuantity(e.target.value)}
+            onChange={(e: any) => setQuantity(e.target.value)}
             defaultValue={1}
             className="quantity h-12  w-12 md:h-8 border"
           />
-          <button className="h-9 ml-3 px-2 py-2 bg-[#f51010] text-white border-none text-base font-medium cursor-pointer">
+          <button
+            onClick={handleClick}
+            className="h-9 ml-3 px-2 py-2 bg-[#f51010] text-white border-none text-base font-medium cursor-pointer"
+          >
             Add to Cart
           </button>
         </div>

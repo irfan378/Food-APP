@@ -1,7 +1,29 @@
-import React from 'react'
-
-const cartSlice = () => {
- 
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+interface cartState {
+  products: [];
+  quantity: number;
+  total: number;
 }
 
-export default cartSlice
+const initialState = { products: [], total: 0, quantity: 0 } as cartState;
+
+const cartSlice = createSlice({
+  name: "cart",
+  initialState,
+  reducers: {
+    addProduct: (
+      state: { products: any[]; total: number; quantity: number },
+      action: PayloadAction<any>
+    ) => {
+      state.products.push(action.payload);
+      state.quantity += 1;
+      state.total += action.payload.price * action.payload.quantity;
+    },
+    reset: (state: { products: any[]; total: number }) => {
+      state: initialState;
+    },
+  },
+});
+export const { addProduct, reset } = cartSlice.actions;
+export default cartSlice.reducer;

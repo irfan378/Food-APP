@@ -1,8 +1,10 @@
 import { NextPage } from "next";
 import React from "react";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 const Navbar: NextPage = () => {
+  const quantity: number = useSelector((state:any) => state.cart.quantity);
   return (
     <div className="containers z-[999] h-24 p-0 pr-12 pl-12 bg-red-500 flex justify-between items-center top-0">
       <div className="item flex-[3] md:flex-none w-52 mh-14 flex items-center">
@@ -27,7 +29,7 @@ const Navbar: NextPage = () => {
         <div className="cart absolute">
           <Image src="/img/cart.png" alt="" width="32" height="32" />
         </div>
-        <div className="counter relative -top-4 -right-2">2</div>
+        <div className="counter relative -top-4 -right-2">{quantity}</div>
       </div>
     </div>
   );
