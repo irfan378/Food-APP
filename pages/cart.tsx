@@ -1,21 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  PayPalScriptProvider,
-  PayPalButtons,
-  usePayPalScriptReducer
-} from "@paypal/react-paypal-js";
-import { PayPalScriptOptions } from "@paypal/paypal-js/types/script-options";
-import { PayPalButtonsComponent } from "@paypal/paypal-js/types/components/buttons";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 const Cart = () => {
+  const [open, setOpen] = useState<boolean>(false);
   const initialOptions = {
     "client-id": "test",
     currency: "USD",
     intent: "capture",
     "data-client-token": "abc123xyz==",
-};
+  };
   const dispatch = useDispatch();
   const cart = useSelector((state: any) => state.cart);
   return (
@@ -32,8 +27,8 @@ const Cart = () => {
               <th className="p-[30px]">Total</th>
             </tr>
           </thead>
-            <tbody>
-          {cart.products.map((product: any) => (
+          <tbody>
+            {cart.products.map((product: any) => (
               <tr
                 className="flex flex-col items-center justify-center md:flex-row"
                 key={product._id}
@@ -72,8 +67,8 @@ const Cart = () => {
                   </span>
                 </td>
               </tr>
-          ))}
-            </tbody>
+            ))}
+          </tbody>
         </table>
       </div>
       <div className="right flex-[1]">
@@ -88,12 +83,22 @@ const Cart = () => {
           <div className="totalText">
             <b className="totalTextTitle mr-3">Total:</b>${cart.total}
           </div>
-          <button className="button text-red-500 h-8 mt-5  bg-white font-bold cursor-pointer">
-            Checkout Now!
-          </button>
-          <PayPalScriptProvider options={{ "client-id": "test" }}>
-            <PayPalButtons style={{ layout: "horizontal" }} />
-        </PayPalScriptProvider>
+
+          {open ? (
+            <div className="payment mt-3 flex flex-col">
+              <button className="cashOnDelivery px-2 py-2 cursor-pointer mb-2 bg-white text-teal-700 font-bold">Cash on Delivery</button>
+            <PayPalScriptProvider options={{ "client-id": "test" }}>
+              <PayPalButtons style={{ layout: "horizontal" }} />
+            </PayPalScriptProvider>
+            </div>
+          ) : (
+            <button
+              onClick={() => setOpen(true)}
+              className="button text-red-500 h-8 mt-5  bg-white font-bold cursor-pointer"
+            >
+              Checkout Now!
+            </button>
+          )}
         </div>
       </div>
     </div>
