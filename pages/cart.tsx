@@ -2,17 +2,32 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import axios from "axios";
+import { useRouter } from "next/router";
+import { reset } from "../redux/cartSlice";
 
 const Cart = () => {
   const [open, setOpen] = useState<boolean>(false);
   const initialOptions = {
-    "client-id": "test",
+    "client-id":
+      "AZjpv7O3HwS0kdo-lhb6DyxHr-IVMbnv65J1rlm3wsZbjt3RXxmHVodtTFDcs3REogrISg5KhyAZk4QU",
     currency: "USD",
     intent: "capture",
     "data-client-token": "abc123xyz==",
   };
   const dispatch = useDispatch();
   const cart = useSelector((state: any) => state.cart);
+  const router = useRouter();
+  const createOrder = async (data: any) => {
+    try {
+      const res = axios.post("http://localhost:3000/api/orders", data);
+      (await res).status === 201 && router.push("/orders/" + (await res).data._id);
+      dispatch(reset())
+    } catch (err) {
+      console.log(err)
+    }
+    
+  };
   return (
     <div className="container3 flex flex-col p-5 md:flex-row ">
       <div className="left flex-[2]">
@@ -86,10 +101,34 @@ const Cart = () => {
 
           {open ? (
             <div className="payment mt-3 flex flex-col">
-              <button className="cashOnDelivery px-2 py-2 cursor-pointer mb-2 bg-white text-teal-700 font-bold">Cash on Delivery</button>
-            <PayPalScriptProvider options={{ "client-id": "test" }}>
-              <PayPalButtons style={{ layout: "horizontal" }} />
-            </PayPalScriptProvider>
+              <button className="cashOnDelivery px-2 py-2 cursor-pointer mb-2 bg-white text-teal-700 font-bold">
+                Cash on Delivery
+              </button>
+              <PayPalScriptProvider options={{ "client-id": "test" }}>
+                <PayPalButtons
+                  createOrder={(data, actions) => {
+                    return actions.order.create({
+                      purchase_units: [
+                        {
+                          amount: {
+                            value: "1.99",
+                          },
+                        },
+                      ],
+                    });
+                  }}
+                  onApprove={(data, actions: any) => {
+                    return actions.order.capture().then((details: any) => {
+                      const shipping = details.purchase_units[0].shipping;
+                      createOrder({
+                        customer:shipping.name.full_name,
+                        address:shipping.address.address_line_1,
+                        total:cart.total,
+                      })
+                    });
+                  }}
+                />
+              </PayPalScriptProvider>
             </div>
           ) : (
             <button

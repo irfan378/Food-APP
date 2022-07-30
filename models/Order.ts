@@ -1,4 +1,5 @@
-import { createSchema, Type, typedModel } from "ts-mongoose";
+import { createSchema, Type } from "ts-mongoose";
+import mongoose from "mongoose";
 
 const OrderSchema = createSchema(
   {
@@ -10,4 +11,4 @@ const OrderSchema = createSchema(
   },
   { timestamps: true }
 );
-export const Order = typedModel("Order", OrderSchema);
+export const Order=mongoose.models.Product||mongoose.model("Order",OrderSchema)
