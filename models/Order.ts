@@ -11,4 +11,4 @@ const OrderSchema = createSchema(
   },
   { timestamps: true }
 );
-export const Order=mongoose.models.Product||mongoose.model("Order",OrderSchema)
+export const Order=mongoose.models.Order||mongoose.model("Order",OrderSchema)
