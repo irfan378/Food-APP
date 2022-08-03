@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import {
+  PayPalScriptProvider,
+  PayPalButtons,
+  usePayPalScriptReducer,
+} from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
 
 const Cart = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [cash, setCash] = useState<boolean>(false);
   const initialOptions = {
     "client-id":
       "AZjpv7O3HwS0kdo-lhb6DyxHr-IVMbnv65J1rlm3wsZbjt3RXxmHVodtTFDcs3REogrISg5KhyAZk4QU",
@@ -18,15 +23,71 @@ const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state: any) => state.cart);
   const router = useRouter();
-  const createOrder = async (data: any) => {
+  const createOrder = async (data: unknown) => {
     try {
-      const res = axios.post("http://localhost:3000/api/orders", data);
-      (await res).status === 201 && router.push("/orders/" + (await res).data._id);
-      dispatch(reset())
+      const res = await axios.post("http://localhost:3000/api/orders", data);
+      res.status === 201 && router.push("/orders/" + res.data._id);
+      dispatch(reset());
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-    
+  };
+  const amount = cart.total;
+  const currency = "USD";
+  const style: any = { layout: "vertical" };
+
+  const ButtonWrapper = ({ currency, showSpinner }: any) => {
+    const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+
+    useEffect(() => {
+      dispatch({
+        type: "resetOptions",
+        value: {
+          ...options,
+          currency: currency,
+        },
+      });
+    }, [currency, showSpinner]);
+    return (
+      <>
+        {showSpinner && isPending && <div className="spinner" />}
+        <PayPalButtons
+          style={style}
+          disabled={false}
+          forceReRender={[amount, currency, style]}
+          fundingSource={undefined}
+          createOrder={(data, actions) => {
+            return actions.order
+              .create({
+                purchase_units: [
+                  {
+                    amount: {
+                      currency_code: currency,
+                      value: amount,
+                    },
+                  },
+                ],
+              })
+              .then((orderId) => {
+                // Your code here after create the order
+                return orderId;
+              });
+          }}
+          onApprove={function (data, actions: any) {
+            return actions.order.capture().then(function (details: any) {
+              // Your code here after capture the order
+              const shipping = details.purchase_units[0].shipping;
+              createOrder({
+                customer: shipping.name.full_name,
+                address: shipping.address.address_line_1,
+                total: cart.total,
+                method: 1,
+              });
+            });
+          }}
+        />
+      </>
+    );
   };
   return (
     <div className="container3 flex flex-col p-5 md:flex-row ">
@@ -101,33 +162,21 @@ const Cart = () => {
 
           {open ? (
             <div className="payment mt-3 flex flex-col">
-              <button className="cashOnDelivery px-2 py-2 cursor-pointer mb-2 bg-white text-teal-700 font-bold">
+              <button
+                onClick={() => setCash(true)}
+                className="cashOnDelivery px-2 py-2 cursor-pointer mb-2 bg-white text-teal-700 font-bold"
+              >
                 Cash on Delivery
               </button>
-              <PayPalScriptProvider options={{ "client-id": "test" }}>
-                <PayPalButtons
-                  createOrder={(data, actions) => {
-                    return actions.order.create({
-                      purchase_units: [
-                        {
-                          amount: {
-                            value: "1.99",
-                          },
-                        },
-                      ],
-                    });
-                  }}
-                  onApprove={(data, actions: any) => {
-                    return actions.order.capture().then((details: any) => {
-                      const shipping = details.purchase_units[0].shipping;
-                      createOrder({
-                        customer:shipping.name.full_name,
-                        address:shipping.address.address_line_1,
-                        total:cart.total,
-                      })
-                    });
-                  }}
-                />
+              <PayPalScriptProvider
+                options={{
+                  "client-id":
+                    "AZjpv7O3HwS0kdo-lhb6DyxHr-IVMbnv65J1rlm3wsZbjt3RXxmHVodtTFDcs3REogrISg5KhyAZk4QU",
+                  components: "buttons",
+                  currency: "USD",
+                }}
+              >
+                <ButtonWrapper currency={currency} showSpinner={false} />
               </PayPalScriptProvider>
             </div>
           ) : (
