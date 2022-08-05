@@ -5,7 +5,7 @@ import styles from "../../styles/Order.module.css";
 import axios from "axios";
 
 const Order: NextPage = ({ order }: any) => {
-  const status: number = order.status;
+  const status: number = order.status;  
   const statusClass = (index: number) => {
     if (index - status < 1) {
       return styles.done;
@@ -37,16 +37,16 @@ const Order: NextPage = ({ order }: any) => {
                 </td>
                 <td>
                   <span className="name font-medium text-red-600">
-                   {order.customer}
+                    {order.customer}
                   </span>
                 </td>
                 <td>
-                  <span className="address">
-                    {order.address}
-                  </span>
+                  <span className="address">{order.address}</span>
                 </td>
                 <td>
-                  <span className="total font-medium text-lg">${order.total}</span>
+                  <span className="total font-medium text-lg">
+                    ${order.total}
+                  </span>
                 </td>
               </tr>
             </tbody>

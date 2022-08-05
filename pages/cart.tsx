@@ -9,17 +9,11 @@ import {
 import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
+import OrderDetail from "../component/OrderDetail";
 
 const Cart = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [cash, setCash] = useState<boolean>(false);
-  const initialOptions = {
-    "client-id":
-      "AZjpv7O3HwS0kdo-lhb6DyxHr-IVMbnv65J1rlm3wsZbjt3RXxmHVodtTFDcs3REogrISg5KhyAZk4QU",
-    currency: "USD",
-    intent: "capture",
-    "data-client-token": "abc123xyz==",
-  };
   const dispatch = useDispatch();
   const cart = useSelector((state: any) => state.cart);
   const router = useRouter();
@@ -69,13 +63,11 @@ const Cart = () => {
                 ],
               })
               .then((orderId) => {
-                // Your code here after create the order
                 return orderId;
               });
           }}
           onApprove={function (data, actions: any) {
             return actions.order.capture().then(function (details: any) {
-              // Your code here after capture the order
               const shipping = details.purchase_units[0].shipping;
               createOrder({
                 customer: shipping.name.full_name,
@@ -189,6 +181,7 @@ const Cart = () => {
           )}
         </div>
       </div>
+      {/* {cash && <OrderDetail total={cart.total} createOrder={createOrder} />} */}
     </div>
   );
 };
