@@ -19,16 +19,18 @@ const Navbar: NextPage = () => {
       </div>
       <div className="item hidden md:block grow h-14">
         <ul className="list p-0 flex items-center justify-center text-white">
-          <li className="listItem m-5 font-medium text-xl">Home</li>
-          <li className="listItem m-5 font-medium text-xl">Products</li>
-          <li className="listItem m-5 font-medium text-xl">Menu</li>
-          <li className="listItem m-5 font-medium text-xl">Events</li>
-          <li className="listItem m-5 font-medium text-xl">Contact</li>
+          <Link href="/">
+          <li className="listItem m-5 font-medium text-xl cursor-pointer">Home</li>
+          </Link>
+          <li className="listItem m-5 font-medium text-xl cursor-pointer">Products</li>
+          <li className="listItem m-5 font-medium text-xl cursor-pointer">Menu</li>
+          <li className="listItem m-5 font-medium text-xl cursor-pointer">Events</li>
+          <li className="listItem m-5 font-medium text-xl cursor-pointer">Contact</li>
         </ul>
       </div>
       <Link href="/cart"passHref>
         <div className="item  flex-none md:w-52  justify-end text-white flex">
-          <div className="cart absolute">
+          <div className="cart absolute cursor-pointer">
             <Image src="/img/cart.png" alt="" width="32" height="32" />
           </div>
           <div className="counter relative -top-4 -right-2">{quantity}</div>
