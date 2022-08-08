@@ -31,7 +31,7 @@ const OrderDetail = ({ total, createOrder }: any) => {
           <input
             placeholder="Lane No,Tehsil"
             className="input h-20"
-            onChange={(e) => setCustomer(e.target.value)}
+            onChange={(e) => setAddress(e.target.value)}
           />
         </div>
         <button
