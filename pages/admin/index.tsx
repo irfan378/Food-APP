@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { GetServerSideProps } from "next";
 import axios from "axios";
-import product from "../api/product";
 const index = ({ products, orders }: any) => {
   const [pizzaList, setPizzaList] = useState(products);
   const [orderList, setOrderList] = useState(orders);
@@ -44,7 +43,7 @@ const index = ({ products, orders }: any) => {
               <th>Action</th>
             </tr>
           </tbody>
-          {products.map((product: any) => (
+          {pizzaList.map((product: any) => (
             <tbody key={product._id}>
               <tr className="trTitle">
                 <td>

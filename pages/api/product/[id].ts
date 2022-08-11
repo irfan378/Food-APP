@@ -11,7 +11,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     method,
     query: { id },
   } = req;
-  dbConnect();
+  await dbConnect();
   if (method === "GET") {
     try {
       const product: any = await Product.findById(id);
