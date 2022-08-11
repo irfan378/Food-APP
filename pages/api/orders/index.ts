@@ -7,7 +7,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   await dbConnect();
   if (method === "GET") {
     try {
-        const orders = await Order.find(req.body);
+        const orders = await Order.find();
         res.status(200).json(orders)
       } catch (err) {
         res.status(500).json(err);

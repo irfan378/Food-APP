@@ -8,7 +8,7 @@ type Data = {
 
 export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const { method } = req;
-  dbConnect();
+  await dbConnect();
   if (method === "GET") {
     try {
       const products: any = await Product.find();
