@@ -7,3 +7,6 @@ export interface ProductLists{
     prices: number[];
     extraOptions: [object:any];
 }
+
+  
+  
