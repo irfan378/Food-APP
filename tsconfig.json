@@ -21,6 +21,6 @@
     "@types/react-redux": "^7.1.24",
     
   },
-  "include": ["next-env.d.ts", "redux/**/*.tsx","**/*.ts", "**/*.tsx", "postcss.config.js"],
+  "include": ["next-env.d.ts", "redux/**/*.tsx","**/*.ts", "**/*.tsx", "postcss.config.js", "pages/api/login.js"],
   "exclude": ["node_modules"]
 }
