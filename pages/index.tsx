@@ -6,6 +6,8 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 import { ProductLists } from "../typings";
 import { useState } from "react";
+import Add from "../component/Add";
+import AddButton from "../component/AddButton";
 
 const Home = ({
   pizzaList,
@@ -23,8 +25,9 @@ const Home = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
-      {admin && <span>Hello</span>}
+      {admin && <AddButton setClose={setClose} />}
       <ProductList pizzaList={pizzaList} />
+      {!close && <Add setClose={setClose} />}
     </div>
   );
 };
