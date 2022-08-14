@@ -19,7 +19,7 @@ const Cart = () => {
   const router = useRouter();
   const createOrder = async (data: unknown) => {
     try {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/orders`, data);
+      const res = await axios.post("http://food-app-nine-pearl.vercel.app/api/orders", data);
       res.status === 201 && router.push("/orders/" + res.data._id);
       dispatch(reset());
     } catch (err) {
