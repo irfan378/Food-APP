@@ -8,7 +8,7 @@ const index = ({ products, orders }: any) => {
   const status = ["prepearing", "on the way", "delivered"];
   const hanleDelete = async (id: any) => {
     try {
-      const res = await axios.delete("http://food-app-nine-pearl.vercel.app/api/product/" + id);
+      const res = await axios.delete("https://food-app-nine-pearl.vercel.app/api/product/" + id);
       setPizzaList(pizzaList.filter((pizza: any) => pizza._id !== id));
     } catch (err) {
       console.log(err);
@@ -18,7 +18,7 @@ const index = ({ products, orders }: any) => {
     const item = orderList.filter((order: any) => order._id === id)[0];
     const currentStatus = item.status;
     try {
-      const res = await axios.put("http://food-app-new.vercel.app/api/orders/" + id, {
+      const res = await axios.put("https://food-app-new.vercel.app/api/orders/" + id, {
         status: currentStatus + 1,
       });
       setOrderList([
