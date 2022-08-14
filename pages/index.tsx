@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
   }
-  const res = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product`);
+  const res = await axios.get("/api/product");
 
   return {
     props: {
