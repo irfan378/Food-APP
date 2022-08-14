@@ -134,7 +134,7 @@ const Order: NextPage = ({ order }: any) => {
 export const getServerSideProps: GetServerSideProps = async ({
   params,
 }: any) => {
-  const res = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/orders/${params.id}`);
+  const res = await axios.get("http://food-app-new.vercel.app/api/orders/${params.id}");
   return {
     props: { order: res.data },
   };

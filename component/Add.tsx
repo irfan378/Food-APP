@@ -31,7 +31,7 @@ const Add = ({ setClose }: any) => {
       );
       const { url } = uploadRes.data;
       const newProduct = { title, desc, prices, extraOptions, img: url };
-      await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`, newProduct);
+      await axios.post("http://food-app-new.vercel.app/api/product", newProduct);
       setClose(true);
     } catch (error) {
       console.log(error)
