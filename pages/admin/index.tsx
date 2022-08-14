@@ -8,7 +8,7 @@ const index = ({ products, orders }: any) => {
   const status = ["prepearing", "on the way", "delivered"];
   const hanleDelete = async (id: any) => {
     try {
-      const res = await axios.delete("http://food-app-new.vercel.app/api/product/" + id);
+      const res = await axios.delete("http://food-app-nine-pearl.vercel.app/api/product/" + id);
       setPizzaList(pizzaList.filter((pizza: any) => pizza._id !== id));
     } catch (err) {
       console.log(err);
@@ -123,8 +123,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       },
     };
   }
-  const productRes = await axios.get("http://food-app-new.vercel.app/api/product");
-  const orderRes = await axios.get("http://food-app-new.vercel.app/api/orders");
+  const productRes = await axios.get("http://food-app-nine-pearl.vercel.app/api/product");
+  const orderRes = await axios.get("http://food-app-nine-pearl.vercel.app/api/orders");
   return {
     props: { products: productRes.data, orders: orderRes.data },
   };
