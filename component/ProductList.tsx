@@ -1,14 +1,9 @@
 import React from "react";
-import {  ProductLists } from "../typings";
+import { ProductLists } from "../typings";
 import ProductCard from "./ProductCard";
 
-
-const ProductList= ({pizzaList}:{
-  pizzaList:ProductLists[]
-})=> {
+const ProductList = ({ pizzaList }: { pizzaList: ProductLists[] }) => {
   return (
-   
-   
     <div className="p-[20px,10px] flex flex-col items-center">
       <h1 className="text-center text-3xl font-bold py-5">
         THE BEST PIZZA IN TOWN
@@ -22,15 +17,12 @@ const ProductList= ({pizzaList}:{
         tenetur, qui corrupti ab impedit rerum adipisci itsaque doloremque
         ipsum!{" "}
       </p>
-      
+
       <div className="flex items-center justify-center w-full flex-wrap">
-     
-      {pizzaList.map((pizza):any=>{
-        return <ProductCard key={pizza._id} pizza={pizza}/>
-      })}
-     
+        {pizzaList.map((pizza): any => {
+          return <ProductCard key={pizza._id} pizza={pizza} />;
+        })}
       </div>
-      
     </div>
   );
 };

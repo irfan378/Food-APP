@@ -123,8 +123,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       },
     };
   }
-  const productRes = await axios.get("http://localhost:3000/api/product");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const productRes = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product`);
+  const orderRes = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/orders`);
   return {
     props: { products: productRes.data, orders: orderRes.data },
   };
