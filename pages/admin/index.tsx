@@ -18,7 +18,7 @@ const index = ({ products, orders }: any) => {
     const item = orderList.filter((order: any) => order._id === id)[0];
     const currentStatus = item.status;
     try {
-      const res = await axios.put("https://food-app-new.vercel.app/api/orders/" + id, {
+      const res = await axios.put("http://food-app-new.vercel.app/api/orders/" + id, {
         status: currentStatus + 1,
       });
       setOrderList([

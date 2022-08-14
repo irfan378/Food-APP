@@ -31,7 +31,7 @@ const Add = ({ setClose }: any) => {
       );
       const { url } = uploadRes.data;
       const newProduct = { title, desc, prices, extraOptions, img: url };
-      await axios.post("https://food-app-nine-pearl.vercel.app/api/products", newProduct);
+      await axios.post("https://food-app-nine-pearl.vercel.app/api/product", newProduct);
       setClose(true);
     } catch (error) {
       console.log(error)
