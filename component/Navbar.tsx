@@ -28,7 +28,7 @@ const Navbar: NextPage = () => {
           <li className="listItem m-5 font-medium text-xl cursor-pointer">Contact</li>
         </ul>
       </div>
-      <Link href="/cart"passHref>
+      <Link href="/cart">
         <div className="item  flex-none md:w-52  justify-end text-white flex">
           <div className="cart absolute cursor-pointer">
             <Image src="/img/cart.png" alt="" width="32" height="32" />
