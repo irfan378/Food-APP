@@ -9,7 +9,7 @@ const login = () => {
   const router = useRouter();
   const handleClick = async () => {
     try {
-      await axios.post("http://localhost:3000/api/login", {
+      await axios.post("http://food-app-new.vercel.app/api/login", {
         username,
         password,
       });
